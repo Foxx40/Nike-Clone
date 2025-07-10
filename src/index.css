@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+
+@import "tailwindcss";
+
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+@theme {
+  /* === Font Sizes === */
+  --font-size-xs: 12px;
+  --line-height-xs: 16px;
+
+  --font-size-sm: 14px;
+  --line-height-sm: 20px;
+
+  --font-size-base: 16px;
+  --line-height-base: 19.5px;
+
+  --font-size-lg: 18px;
+  --line-height-lg: 21.94px;
+
+  --font-size-xl: 20px;
+  --line-height-xl: 24.38px;
+
+  --font-size-2xl: 24px;
+  --line-height-2xl: 29.26px;
+
+  --font-size-3xl: 28px;
+  --line-height-3xl: 50px;
+
+  --font-size-4xl: 48px;
+  --line-height-4xl: 58px;
+
+  --font-size-8xl: 96px;
+  --line-height-8xl: 106px;
+
+  /* === Font Families === */
+  --font-palanquin: "Palanquin", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+
+  /* === Colors === */
+  --color-primary: #eceeff;
+  --color-coral-red: #ff6452;
+  --color-slate-gray: #6d6d6d;
+  --color-pale-blue: #f5f6ff;
+  --color-white-400: rgba(255, 255, 255, 0.8);
+
+  /* === Box Shadow === */
+  --box-shadow-3xl: 0 10px 40px rgba(0, 0, 0, 0.1);
+
+  /* === Background Images === */
+  --background-image-hero: url("assets/images/collection-background.svg");
+  --background-image-card: url("assets/images/thumbnail-background.svg");
+
+  /* === Screens === */
+  --screen-wide: 1440px;
+}
+@layer components {
+  .max-container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .input {
+    @apply sm:flex-1 max-sm:w-full text-base leading-normal text-slate-gray pl-5 max-sm:p-5 outline-none sm:border-none border max-sm:border-slate-gray max-sm:rounded-full;
+  }
+
+  .info-text {
+    @apply font-montserrat text-slate-gray text-lg leading-7;
+  }
+}
+@utility padding {
+  @apply sm:px-16 px-8 sm:py-24 py-12;
+}
+
+@utility padding-x {
+  @apply sm:px-16 px-8;
+}
+
+@utility padding-y {
+  @apply sm:py-24 py-12;
+}
+
+@utility padding-l {
+  @apply sm:pl-16 pl-8;
+}
+
+@utility padding-r {
+  @apply sm:pr-16 pr-8;
+}
+
+@utility padding-t {
+  @apply sm:pt-24 pt-12;
+}
+
+@utility padding-b {
+  @apply sm:pb-24 pb-12;
+}
